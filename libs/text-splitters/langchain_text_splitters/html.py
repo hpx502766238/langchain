@@ -229,7 +229,7 @@ class HTMLSectionSplitter:
 
                 for key in chunk.metadata.keys():
                     if chunk.metadata[key] == "#TITLE#":
-                        chunk.metadata[key] = metadata["Title"]
+                        chunk.metadata[key] = metadata["title"]
                 metadata = {**metadata, **chunk.metadata}
                 new_doc = Document(page_content=chunk.page_content, metadata=metadata)
                 documents.append(new_doc)
